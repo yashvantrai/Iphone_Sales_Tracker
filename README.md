@@ -35,18 +35,21 @@ uvicorn app.main:app --reload
 http://127.0.0.1:8000/docs
 
 # API Endpoints:
-method      -     Endpoint        -      Description
-GET               /sales/                List all sales
-POST              /sales/                Create a new sale
-GET               /sales/{sale_id}       Retrieve a sale by ID
-PUT	              /sales/{sale_id}	     Update a sale by ID 
-DELETE	          /sales/{sale_id}	     Delete a sale by ID
-GET	              /sales/stats	         Get sales statistics
+
+| Method | Endpoint            | Description             |
+|--------|---------------------|-------------------------|
+| GET    | `/sales/`           | List all sales          |
+| POST   | `/sales/`           | Create a new sale       |
+| GET    | `/sales/{sale_id}`  | Retrieve a sale by ID   |
+| PUT    | `/sales/{sale_id}`  | Update a sale by ID     |
+| DELETE | `/sales/{sale_id}`  | Delete a sale by ID     |
+| GET    | `/sales/stats`      | Get sales statistics    |
 
 #Data Validation:
-Field	   -       Type	        -        Validation Rules
-customer_name	   string	             Required, non-empty
-phone_model	       string	             Must be a valid iPhone model
-color	           string	             Limited to specific valid colors 
-purchase_date	   date	                 Format: YYYY-MM-DD
-price	           decimal	             Required, must be a positive number
+| Field           | Type     | Validation Rules                                   |
+|----------------|----------|---------------------------------------------------|
+| `customer_name`| string   | Required, non-empty                               |
+| `phone_model`  | string   | Must be a valid iPhone model                      |
+| `color`        | string   | Limited to specific valid colors                  |
+| `purchase_date`| date     | Format: YYYY-MM-DD                                |
+| `price`        | decimal  | Required, must be a positive number        
